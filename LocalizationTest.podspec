@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     s.license       = 'MIT'
     s.author        = { 'Thanapat Sorralump' => 'thanapat423@gmail.com' }
 
-    s.source        = { :git => 'https://github.com/camp191/PrivatePodLocalize.git', :branch => 'master', :tag => s.version.to_s}
+    s.source        = { :git => 'https://github.com/camp191/PrivatePodLocalize.git', :branch => 'master'}
     s.source_files  = 'TestLocalization/*.{swift}'
     s.resources     = 'TestLocalization/**/*.{strings,xcassets,storyboard,xib,xcdatamodeld,lproj}'
 
