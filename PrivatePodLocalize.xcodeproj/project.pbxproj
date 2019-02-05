@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		D0135AF0220920C9009892EF /* PrivatePodLocalize.h in Headers */ = {isa = PBXBuildFile; fileRef = D0135AEE220920C9009892EF /* PrivatePodLocalize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0135AF9220921D7009892EF /* TestLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0135AFB220921D7009892EF /* TestLocalizable.strings */; };
+		D0135AFE2209223B009892EF /* TestLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0135AFD2209223B009892EF /* TestLocalizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0135AEB220920C9009892EF /* PrivatePodLocalize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrivatePodLocalize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0135AEE220920C9009892EF /* PrivatePodLocalize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivatePodLocalize.h; sourceTree = "<group>"; };
 		D0135AEF220920C9009892EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0135AFA220921D7009892EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TestLocalizable.strings; sourceTree = "<group>"; };
+		D0135AFC220921E4009892EF /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/TestLocalizable.strings; sourceTree = "<group>"; };
+		D0135AFD2209223B009892EF /* TestLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocalizable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +51,20 @@
 		D0135AED220920C9009892EF /* PrivatePodLocalize */ = {
 			isa = PBXGroup;
 			children = (
+				D0135AF622092191009892EF /* Resources */,
 				D0135AEE220920C9009892EF /* PrivatePodLocalize.h */,
 				D0135AEF220920C9009892EF /* Info.plist */,
+				D0135AFD2209223B009892EF /* TestLocalizable.swift */,
 			);
 			path = PrivatePodLocalize;
+			sourceTree = "<group>";
+		};
+		D0135AF622092191009892EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0135AFB220921D7009892EF /* TestLocalizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +110,7 @@
 				TargetAttributes = {
 					D0135AEA220920C9009892EF = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -104,6 +120,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				th,
 			);
 			mainGroup = D0135AE1220920C9009892EF;
 			productRefGroup = D0135AEC220920C9009892EF /* Products */;
@@ -120,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0135AF9220921D7009892EF /* TestLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,16 +148,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0135AFE2209223B009892EF /* TestLocalizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0135AFB220921D7009892EF /* TestLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0135AFA220921D7009892EF /* en */,
+				D0135AFC220921E4009892EF /* th */,
+			);
+			name = TestLocalizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D0135AF1220920C9009892EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -204,6 +236,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -261,6 +294,7 @@
 		D0135AF4220920C9009892EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -277,6 +311,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.campus.PrivatePodLocalize;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +320,7 @@
 		D0135AF5220920C9009892EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
